@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
-import SoIF from "./components/SoIF";
+import Books from "./components/Books";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-     <SoIF />
+      <h2>Nic's shitty app</h2>
+     <Books />
     </div>
   );
-}
-
-export default App;
+};
