@@ -6,7 +6,13 @@ import {
 
 const initialState = {
   isLoading: false,
-  message: [],
+  data: [
+    {
+    id: Date.now(),
+    fuel: "",
+    perc: null
+  }
+],
   error: ""
 };
 
@@ -21,7 +27,7 @@ export const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         isLoading: false,
-        message: action.payload
+        data: action.payload
       };
     default:
       return state;

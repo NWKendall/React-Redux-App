@@ -7,10 +7,10 @@ export const FETCHING_ACTIVITY_FAILURE = "FETCHING_ACTIVITY_FAILURE";
 export const fetchActivity = () => dispatch => {
   dispatch({ type: FETCHING_ACTIVITY_START });
   axios
-    .get("https://dog.ceo/api/breed/pitbull/images")
+    .get("https://api.carbonintensity.org.uk/generation")
     .then(res => {
-      console.log(`this is res`, res.data.message)
-      dispatch({ type: FETCHING_ACTIVITY_SUCCESS, payload: res.data.message });
+      console.log(`this is res`, res)
+      dispatch({ type: FETCHING_ACTIVITY_SUCCESS, payload: res.data.data.generationmix});
     })
     .catch(err => {
       console.log(`this is err`, err)
